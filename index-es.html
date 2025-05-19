@@ -32,7 +32,13 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#beca">Beca XR LATAM</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">Nosotres</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index-pt.html">Português</a></li>
+                    <li class="nav-item">
+                        <select id="lang-select" class="form-select form-select-sm" onchange="window.location.href=this.value;">
+                          <option value="index-es.html">Español</option>
+                          <option value="index-en.html">English</option>
+                          <option value="index-pt.html">Português</option>
+                        </select>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -267,5 +273,16 @@
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     <script src="p5/sketch.js" type="text/javascript"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const select = document.getElementById('lang-select');
+          // Extract just the filename (e.g. "index-en.html")
+          const current = window.location.pathname.split('/').pop() || 'index-es.html';
+          // If it matches one of our options, select it
+          if ([...select.options].some(opt => opt.value === current)) {
+            select.value = current;
+          }
+        });
+      </script>
     </body>
 </html>

@@ -2,29 +2,36 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="refresh" content="0; url=index.html">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="author" content="maix" />
-    <meta name="description" content="MAIX - Movimento de Arte e Pesquisa Estendida. Bolsa XR LATAM para criadores de realidade estendida na América Latina." />
-    <title>MAIX</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <meta name="author" content="maix" />
+  <meta name="description" content="MAIX - Movimiento de Arte e Investigación Extendida. Beca XR LATAM para creadores de realidad extendida en América Latina." />
+  <title>MAIX</title>
   <script>
-    // Espera a que el DOM esté listo
-    window.onload = function () {
-      const userLang = navigator.language || navigator.userLanguage;
+    window.addEventListener('DOMContentLoaded', () => {
+      const userLang = (navigator.language || navigator.userLanguage || 'es').toLowerCase();
 
-      // Redirección según el idioma
       if (userLang.startsWith('pt')) {
-        window.location.href = 'index-pt.html'; // Versión en portugués
+        // Portuguese
+        window.location.replace('index-pt.html');
+      } else if (userLang.startsWith('en')) {
+        // English
+        window.location.replace('index-en.html');
       } else {
-        window.location.href = 'index-es.html'; // Versión en español por defecto
+        // Default to Spanish
+        window.location.replace('index-es.html');
       }
-    };
+    });
   </script>
 </head>
 <body>
-  <img class="img-70 mb-3" src="assets/img/logo_maix.png" alt="Logo del colectivo MAIX: Movimiento de Arte e Investigación Extendida" />
-  <h2 class="text-white-50 mx-auto mt-2 mb-5">Movimiento de Arte e Investigación Extendida</h2>
-  <a class="btn btn-primary" href="#beca">Convocatoria 2025</a>
+  <!-- Optional: loading/fallback content -->
+  <div style="text-align:center; padding:2rem;">
+    <p>Detecting language… If you are not redirected automatically, you can choose one:</p>
+    <ul style="list-style:none; padding:0;">
+      <li><a href="index-es.html">Español</a></li>
+      <li><a href="index-en.html">English</a></li>
+      <li><a href="index-pt.html">Português</a></li>
+    </ul>
+  </div>
 </body>
 </html>

@@ -3749,6 +3749,8 @@ textarea.form-control-lg {
   list-style: none;
 }
 
+
+
 .nav-link {
   display: block;
   padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
@@ -3848,6 +3850,47 @@ textarea.form-control-lg {
 .nav-justified .nav-item .nav-link {
   width: 100%;
 }
+
+/* Language selector in navbar */
+.navbar-nav .form-select {
+  /* match nav-link typography */
+  font-size: 1.5rem;                   /* same as .nav-link */
+  padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+  font-weight: var(--bs-nav-link-font-weight);
+  color: var(--color-maix-tertiary);
+  
+  /* transparent background, no border */
+  background-color: transparent;
+  border: none;
+  appearance: none;                    /* remove default arrow */
+
+  /* layout */
+  width: auto;
+  margin-top: calc(var(--bs-nav-link-padding-y) * -1); /* vertically center */
+}
+
+/* remove focus glow */
+.navbar-nav .form-select:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* hide IE/Edge dropdown arrow */
+.navbar-nav .form-select::-ms-expand {
+  display: none;
+}
+
+/* add a custom arrow using a simple SVG data-URI */
+.navbar-nav .form-select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23" +
+    encodeURIComponent(getComputedStyle(document.documentElement)
+      .getPropertyValue('--color-maix-tertiary').trim().substring(1)) +
+    "' d='M2 0L0 2h4z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: .65em auto;
+}
+
 
 .tab-content > .tab-pane {
   display: none;

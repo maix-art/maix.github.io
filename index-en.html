@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="author" content="maix" />
+    <meta name="description" content="MAIX - Extended Art and Research Movement. XR LATAM Grant for extended reality creators in Latin America." />
+    <title>MAIX</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <!-- Load p5.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/addons/p5.sound.min.js"></script>
+</head>
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="#page-top">MAIX</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item"><a class="nav-link" href="#beca">XR LATAM Grant</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                  <li class="nav-item">
+                    <select id="lang-select" class="form-select form-select-sm" onchange="window.location.href=this.value;">
+                      <option value="index-es.html">Español</option>
+                      <option value="index-en.html">English</option>
+                      <option value="index-pt.html">Português</option>
+                    </select>
+                  </li>
+                </ul>
+              </div>
+        </div>
+    </nav>
+    <!-- Masthead-->
+    <header id="hero">
+        <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+            <div class="d-flex justify-content-center">
+                <div class="text-center">
+                    <img class="img-70 mb-3" src="assets/img/logo_maix.png"
+                        alt="MAIX collective logo: Extended Art and Research Movement" />
+                    <h2 class="text-white mx-auto mt-2 mb-5">Extended Art and Research Movement</h2>
+                    <a class="btn btn-primary" href="#beca">2025 Call</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Grant Application-->
+    <section class="about-section" id="beca">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="text-dark mb-4">XR LATAM GRANT 2025 CALL</h2>
+                    <p class="text-dark">
+                        The XR LATAM Grant supports XR creatives throughout Latin America. We focus on projects and experiences
+                        that generate artistic expressions about current social realities and popular culture.
+                        <br>
+                        We seek examples of creative excellence, technical quality, and innovation through the hybridization of
+                        different media and disciplines, with special emphasis on the ethical dimension of the proposals.
+                    </p>
+                    <!-- Button rows -->
+                    <div class="row mb-3 justify-content-center">
+                        <div class="col-md-6">
+                            <a class="btn btn-primary w-100"
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSfVe_HNc6ATY1oNqU4zYmrECQvioI6e3BYrT7S1pvwhEgWVzA/viewform">Apply</a>
+                        </div>
+                    </div>
+                    <div class="row mb-2 justify-content-center">
+                        <div class="col-md-3 justify-content-center">
+                            <a class="link-info w-100" href="https://lu.ma/geor9vfp">Information Session</a>
+                        </div>
+                        <div class="col-md-3 center">
+                            <a class="link-info w-100"
+                                href="https://docs.google.com/document/u/3/d/e/2PACX-1vT6XHWhHCC--czYcGIVai24UWia2nB81GUo8Ej6nvsAX8kcp-Vf0b8opKZeO88fUQ/pub">Terms
+                                and Conditions</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Prizes-->
+    <section class="prices-section about-section-gradient">
+        <div class="container px-lg-5">
+            <div class="row gx-0 justify-content-center">
+                <h3 class="text-white text-center">PRIZES</h3>
+                <p class="mb-5 text-white-50">
+                    The winning project will receive a cash prize and opportunities for partnerships and support for the
+                    development of their project through festivals, partner companies, and industry professionals.
+                </p>
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-md-4 mb-md-0">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <h4 class="text-uppercase m-0">🥇 First Prize:</h4>
+                                <hr class="my-2 mx-auto" />
+                                <div class="small text-dark">US$ 1,000 + 3 hours of mentorship</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-md-0">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <h4 class="text-uppercase m-0">🥈 Second Prize:</h4>
+                                <hr class="my-2 mx-auto" />
+                                <div class="small text-dark">US$ 900 + 3 hours of mentorship</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-md-0">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <h4 class="text-uppercase m-0">🥉 Third Prize:</h4>
+                                <hr class="my-2 mx-auto" />
+                                <div class="small text-dark">3 hours of mentorship</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Grant Details-->
+    <section class="projects-section bg-light" id="beca">
+        <div class="container px-lg-5">
+            <div class="row gx-0 justify-content-center">
+                <div class="col-lg-6 order-lg-first">
+                    <div class="bg-maix-primary text-center h-100 project">
+                        <div class="d-flex h-100">
+                            <div class="project-text w-100 my-auto text-center text-lg-right">
+                                <h4 class="text-white">WHO IT SUPPORTS</h4>
+                                <p class="mb-0 text-white-50">
+                                    The goal of this initiative is to support and empower independent Latin American creators
+                                    based in Latin American countries. We recognize Latin America as a multiplicity of
+                                    nationalities, indigenous peoples, gender expressions, and other ethnicities and identities
+                                    where we are all included.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-first">
+                    <div class="bg-maix-secondary text-center h-100 project">
+                        <div class="d-flex h-100">
+                            <div class="project-text w-100 my-auto text-center text-lg-right">
+                                <h4 class="text-white">WHAT IT FUNDS</h4>
+                                <p class="mb-0 text-white-50">
+                                    Funding should be used to significantly boost the project, such as development,
+                                    production, post-production, and distribution costs, hiring a conceptual artist, or
+                                    creating a prototype. Projects at any stage of creation are eligible.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Selection Criteria & Calendar-->
+            <div class="row gx-0 justify-content-center">
+                <div class="col-lg-6 order-lg-first">
+                    <div class="bg-maix-tertiary text-center h-100 project">
+                        <div class="d-flex h-100">
+                            <div class="project-text w-100 my-auto text-center text-lg-right">
+                                <h4 class="text-white">SELECTION CRITERIA</h4>
+                                <p class="mb-0 text-white-50">
+                                    All genres, categories, and formats of narrative, interactive, and/or immersive projects
+                                    will be considered, including augmented reality, virtual reality, mixed reality, VR films,
+                                    applications, interactive web narratives, multimedia projects, 360° video, and more.
+                                    <br>Special emphasis (though not limited to) will be placed on emerging creators (first
+                                    and second projects), people of marginalized genders (women and gender dissidents),
+                                    indigenous communities, and underrepresented groups (racialized, migrants, people with
+                                    disabilities, etc.).
+                                    <br>The creative, technical, and financial aspects of the proposal will be evaluated, as
+                                    well as the project’s relevance.
+                                    <br><br>The call will be declared void if fewer than 6 applications are received.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-first">
+                    <div class="bg-maix-dark text-center h-100 project">
+                        <div class="d-flex h-100">
+                            <div class="project-text w-100 my-auto text-center text-lg-right">
+                                <h4 class="text-white">🗓️ CALENDAR</h4>
+                                <ul class="list-group list-group-flush shadow-lg rounded">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <strong>📅 Application Start:</strong>
+                                        <span>April 7, 2025</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <strong>🛠️ Application Workshop:</strong>
+                                        <span>April 17, 2025</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <strong>⏰ Application Deadline:</strong>
+                                        <span>April 30, 2025</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <strong>📢 Official Results Announcement:</strong>
+                                        <span>May 7, 2025</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <strong>🎤 Project Pitches:</strong>
+                                        <span>May 22, 2025 (1 hour)</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <strong>🏆 Winners Announcement:</strong>
+                                        <span>May 30, 2025</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About MAIX-->
+    <section class="projects-section bg-light" id="about">
+        <div class="container px-lg-5">
+            <!-- Who We Are-->
+            <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                <div class="col-xl-4 col-lg-5">
+                    <video class="img-fluid mb-3 custom-rounded" autoplay loop muted playsinline>
+                        <source src="assets/vid/Choclo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="col-xl-8 col-lg-5">
+                    <div class="featured-text text-center text-lg-left text-dark">
+                        <h4>WHO WE ARE</h4>
+                        <p class="text-dark mb-0">
+                            MAIX is an initiative created by and for artists, creators, artisans, designers,
+                            communicators, and other Latin American professionals using XR technologies, rooted in
+                            and representing their communities. We believe in providing a caring space for
+                            collaboration and mutual learning where participants can form vital connections.
+                            <br>The goal of this initiative is to support and empower independent Latin American
+                            creators based in Latin America. We recognize the region as a diversity of
+                            nationalities, identities, Afro-descendant and indigenous peoples, gender expressions,
+                            and other ethnicities where we are all included.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Mission-->
+            <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                <div class="col-xl-8 col-lg-5">
+                    <div class="featured-text text-center text-lg-left text-dark">
+                        <h4>MISSION</h4>
+                        <p class="text-dark mb-0">
+                            We foster spaces for co-creation, collaboration, experimentation, and the sharing of
+                            knowledge and tools with our communities. We seek partnerships for the long-term
+                            development of XR art to systematically transform the region’s creative ecosystem in an
+                            inclusive and diverse way.
+                            <br>In our processes we value diverse experiences and contributions. We aim to reduce
+                            structural and systemic inequalities in access to creative processes, technology use,
+                            and funding.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-5">
+                    <img class="img-fluid mb-3 custom-rounded" src="assets/img/latam-map-2.png" alt="Map of Latin America" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact-->
+    <section class="contact-section bg-maix-secondary">
+        <div class="container px-lg-5">
+            <h4 class="text-white mb-2 text-center">Visit Us</h4>
+            <div class="social d-flex justify-content-center">
+                <a class="mx-2" href="https://x.com/maix_latam" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a class="mx-2" href="https://www.instagram.com/maix_latam" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Footer-->
+    <footer class="footer bg-maix-secondary small text-center text-white-50">
+        <div class="container px-4 px-lg-5">© MAIX 2025 made with lots of 💜</div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <!-- SB Forms JS-->
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    <script src="p5/sketch.js" type="text/javascript"></script>
+     <!-- language selection-->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const select = document.getElementById('lang-select');
+          // Extract just the filename (e.g. "index-en.html")
+          const current = window.location.pathname.split('/').pop() || 'index-es.html';
+          // If it matches one of our options, select it
+          if ([...select.options].some(opt => opt.value === current)) {
+            select.value = current;
+          }
+        });
+      </script>
+</body>
+</html>
