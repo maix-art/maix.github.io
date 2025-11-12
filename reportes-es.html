@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="author" content="maix" />
+    <meta name="description" content="Reportes y memorias del Movimiento de Arte e Investigación Extendida." />
+    <title>Reportes | MAIX</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="index-es.html#page-top">MAIX</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index-es.html#beca">Beca XR LATAM</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index-es.html#about">Nosotres</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="reportes-es.html">Reportes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reportes-pt.html">Português</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="secondary-hero d-flex align-items-center">
+        <div class="container px-4 px-lg-5 text-center">
+            <img class="img-50 mb-3" src="assets/img/logo_maix.png" alt="Logo del colectivo MAIX: Movimiento de Arte e Investigación Extendida" />
+            <h1 class="text-white">Reportes</h1>
+            <p class="text-white-50 mb-0">Explora la memoria de actividades, convocatorias y aprendizajes de MAIX.</p>
+        </div>
+    </header>
+
+    <main class="py-5">
+        <div class="container px-4 px-lg-5">
+            <div class="row gy-4">
+                <div class="col-lg-4">
+                    <h2 class="mb-3">Documentos disponibles</h2>
+                    <p class="text-muted">Selecciona un reporte para visualizarlo al instante.</p>
+                    <div class="list-group" id="pdfList" role="tablist">
+                        <a class="list-group-item list-group-item-action active" href="assets/pdf/reporte-maix-2024.pdf" data-pdf="assets/pdf/reporte-maix-2024.pdf">Reporte MAIX 2024</a>
+                        <a class="list-group-item list-group-item-action" href="assets/pdf/reporte-maix-2023.pdf" data-pdf="assets/pdf/reporte-maix-2023.pdf">Reporte MAIX 2023</a>
+                        <a class="list-group-item list-group-item-action" href="assets/pdf/reporte-maix-2022.pdf" data-pdf="assets/pdf/reporte-maix-2022.pdf">Reporte MAIX 2022</a>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="ratio ratio-4x3 border rounded shadow-sm">
+                        <iframe id="pdfViewer" src="assets/pdf/reporte-maix-2024.pdf" title="Visualizador de reportes" allow="fullscreen" allowfullscreen></iframe>
+                    </div>
+                    <p class="mt-3 text-muted">Si tienes dificultades para visualizar los documentos, puedes descargarlos desde la lista.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer bg-black small text-center text-white-50">
+        <div class="container px-4 px-lg-5">&copy; MAIX 2025</div>
+    </footer>
+
+    <script>
+        const pdfList = document.getElementById('pdfList');
+        const pdfViewer = document.getElementById('pdfViewer');
+
+        if (pdfList && pdfViewer) {
+            pdfList.addEventListener('click', (event) => {
+                const item = event.target.closest('.list-group-item-action');
+                if (item && pdfList.contains(item) && item.dataset && item.dataset.pdf) {
+                    const hasModifier = event.metaKey || event.ctrlKey || event.shiftKey || event.altKey;
+                    const isPointerEvent = typeof event.button === 'number';
+                    if (hasModifier || (isPointerEvent && event.button !== 0)) {
+                        return;
+                    }
+                    event.preventDefault();
+                    pdfList.querySelectorAll('.list-group-item-action').forEach((node) => node.classList.remove('active'));
+                    item.classList.add('active');
+                    pdfViewer.src = item.dataset.pdf;
+                }
+            });
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

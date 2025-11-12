@@ -653,6 +653,23 @@ progress {
   height: auto;
 }
 
+.secondary-hero {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.95) 0%, rgba(20, 20, 20, 0.95) 100%);
+  min-height: 20rem;
+  padding: 10rem 0 6rem;
+  text-align: center;
+}
+
+.secondary-hero .container {
+  max-width: 720px;
+}
+
+@media (max-width: 991.98px) {
+  .secondary-hero {
+    padding: 8rem 0 4rem;
+  }
+}
+
 .img-thumbnail {
   padding: 0.25rem;
   background-color: #fff;
