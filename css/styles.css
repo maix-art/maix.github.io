@@ -670,6 +670,12 @@ progress {
   }
 }
 
+.third-hero {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.95) 100%, rgba(20, 20, 20, 0.95) 100%);
+  padding: 8rem 0 3rem;
+  text-align: center;
+}
+
 .img-thumbnail {
   padding: 0.25rem;
   background-color: #fff;
@@ -8306,6 +8312,11 @@ textarea.form-control-lg {
 .text-white {
   --bs-text-opacity: 1;
   color: rgba(var(--color-maix-white-rgb), var(--bs-text-opacity)) !important;
+}
+
+.text-primary {
+  --bs-text-opacity: 1;
+  color: rgba(var(--color-maix-primary-rgb)) !important;
 }
 
 .text-body {
