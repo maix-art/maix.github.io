@@ -71,7 +71,7 @@
         const pdfViewer = document.getElementById('pdfViewer');
 
         const getPdfUrl = (relativePath) => {
-            const cdnBase = 'https://maix.github.io/';
+            const cdnBase = 'https://maix.art/';
             const baseUrl = window.location.protocol === 'file:' ? cdnBase : `${window.location.origin}/`;
             return new URL(relativePath, baseUrl);
         };
