@@ -70,6 +70,12 @@
         const pdfList = document.getElementById('pdfList');
         const pdfViewer = document.getElementById('pdfViewer');
 
+        const getPdfUrl = (relativePath) => {
+            const cdnBase = 'https://maix.github.io/';
+            const baseUrl = window.location.protocol === 'file:' ? cdnBase : `${window.location.origin}/`;
+            return new URL(relativePath, baseUrl);
+        };
+
         if (pdfList && pdfViewer) {
             pdfList.addEventListener('click', (event) => {
                 const item = event.target.closest('.list-group-item-action');
@@ -82,14 +88,14 @@
                     event.preventDefault();
                     pdfList.querySelectorAll('.list-group-item-action').forEach((node) => node.classList.remove('active'));
                     item.classList.add('active');
-                    const pdfUrl = new URL(item.dataset.pdf, window.location.href);
+                    const pdfUrl = getPdfUrl(item.dataset.pdf);
                     pdfViewer.src = `https://docs.google.com/gview?embedded=1&url=${encodeURIComponent(pdfUrl.href)}`;
                 }
             });
 
             const initialPdf = pdfList.querySelector('.list-group-item-action.active');
             if (initialPdf && initialPdf.dataset && initialPdf.dataset.pdf) {
-                const pdfUrl = new URL(initialPdf.dataset.pdf, window.location.href);
+                const pdfUrl = getPdfUrl(initialPdf.dataset.pdf);
                 pdfViewer.src = `https://docs.google.com/gview?embedded=1&url=${encodeURIComponent(pdfUrl.href)}`;
             }
         }
