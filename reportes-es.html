@@ -54,7 +54,7 @@
                 </div>
                 <div class="col-lg-8">
                     <div class="ratio ratio-4x3 border rounded shadow-sm">
-                        <iframe id="pdfViewer" src="about:blank" title="Visualizador de reportes" allow="fullscreen" allowfullscreen></iframe>
+                        <iframe id="pdfViewer" src="about:blank" title="Visualizador de reportes" loading="lazy"></iframe>
                     </div>
                     <p class="mt-3 text-muted">Para más información sobre los documentos, selecciona uno de la lista.</p>
                 </div>
@@ -89,14 +89,14 @@
                     pdfList.querySelectorAll('.list-group-item-action').forEach((node) => node.classList.remove('active'));
                     item.classList.add('active');
                     const pdfUrl = getPdfUrl(item.dataset.pdf);
-                    pdfViewer.src = `https://docs.google.com/gview?embedded=1&url=${encodeURIComponent(pdfUrl.href)}`;
+                    pdfViewer.src = `https://drive.google.com/viewerng/viewer?embedded=1&url=${encodeURIComponent(pdfUrl.href)}`;
                 }
             });
 
             const initialPdf = pdfList.querySelector('.list-group-item-action.active');
             if (initialPdf && initialPdf.dataset && initialPdf.dataset.pdf) {
                 const pdfUrl = getPdfUrl(initialPdf.dataset.pdf);
-                pdfViewer.src = `https://docs.google.com/gview?embedded=1&url=${encodeURIComponent(pdfUrl.href)}`;
+                pdfViewer.src = `https://drive.google.com/viewerng/viewer?embedded=1&url=${encodeURIComponent(pdfUrl.href)}`;
             }
         }
     </script>
