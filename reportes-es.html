@@ -89,14 +89,14 @@
                     pdfList.querySelectorAll('.list-group-item-action').forEach((node) => node.classList.remove('active'));
                     item.classList.add('active');
                     const pdfUrl = getPdfUrl(item.dataset.pdf);
-                    pdfViewer.src = `https://drive.google.com/viewerng/viewer?embedded=1&url=${encodeURIComponent(pdfUrl.href)}`;
+                    pdfViewer.src = `https://drive.google.com/viewerng/viewer?embedded=1&url=${pdfUrl.href}`;
                 }
             });
 
             const initialPdf = pdfList.querySelector('.list-group-item-action.active');
             if (initialPdf && initialPdf.dataset && initialPdf.dataset.pdf) {
                 const pdfUrl = getPdfUrl(initialPdf.dataset.pdf);
-                pdfViewer.src = `https://drive.google.com/viewerng/viewer?embedded=1&url=${encodeURIComponent(pdfUrl.href)}`;
+                pdfViewer.src = `https://drive.google.com/viewerng/viewer?embedded=1&url=${pdfUrl.href}`;
             }
         }
     </script>
