@@ -117,6 +117,10 @@
   box-sizing: border-box;
 }
 
+.report-page {
+  background-color: #f3f0e8;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
